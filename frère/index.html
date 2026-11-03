@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperFrère — Entraide entre frères</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SuperFrère accueil">
+<span class="brand-mark blurred-logo">S</span>
+<span class="brand-name blurred-name">SUPERFRÈRE<small>ENTRAIDE • FOI • ÉLÉVATION</small></span>
+    </a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Ouvrir le menu">☰</button>
+    <nav id="nav">
+      <a href="#">Accueil</a>
+      <a href="#">Offres d'emploi</a>
+      <a href="#">Services</a>
+      <a href="#" class="active">Entraide</a>
+      <a href="#">Horaires de prière</a>
+      <a href="#">Ressources⌄</a>
+      <a href="#">À propos</a>
+    </nav>
+    <div class="top-actions">
+      <button class="account" aria-label="Mon compte">♙</button>
+      <button class="announce" id="openModal">⊕ &nbsp; Publier une demande</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="crumb">Accueil &nbsp;›&nbsp; Entraide</div>
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">LA COMMUNAUTÉ À VOTRE ÉCOUTE</p>
+          <h1>Un frère cherche,<br>la communauté répond.</h1>
+          <p class="hero-text">Besoin d'un conseil, d'un contact ou d'un service ? Publiez votre demande et profitez du réseau des frères.</p>
+          <div class="hero-buttons">
+            <button class="primary" id="openModal2">＋ Publier une demande</button>
+            <a class="secondary" href="#requests">Voir les demandes <span>↓</span></a>
+          </div>
+        </div>
+        <div class="hero-note">
+          <div class="note-icon">🤝</div>
+          <strong>L'entraide commence ici</strong>
+          <p>Un contact partagé peut débloquer une situation.</p>
+        </div>
+      </div>
+      <div class="hero-foot">ENTRAIDE · FOI · ÉLÉVATION</div>
+    </section>
+
+    <section class="intro">
+      <p class="section-kicker">ENTRAIDE ENTRE FRÈRES</p>
+      <h2>Vous cherchez quelque chose ?<br><span>La communauté peut vous aider.</span></h2>
+      <p>Publiez votre besoin. Les membres peuvent vous répondre, vous recommander quelqu'un ou partager un contact utile.</p>
+    </section>
+
+    <section class="content" id="requests">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">LE RÉSEAU EN ACTION</p>
+          <h2>Dernières demandes</h2>
+        </div>
+        <button class="outline" id="openModal3">＋ Publier une demande</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter selected" data-filter="Toutes">Toutes</button>
+        <button class="filter" data-filter="Services">Services</button>
+        <button class="filter" data-filter="Professionnel">Professionnel</button>
+        <button class="filter" data-filter="Conseils">Conseils</button>
+        <button class="filter" data-filter="Bons plans">Bons plans</button>
+      </div>
+
+      <div class="request-grid" id="requestGrid">
+        <article class="request-card" data-category="Services">
+          <div class="card-top"><span class="tag">SERVICES</span><span class="date">Il y a 2 h</span></div>
+          <h3>Recherche d'un artisan sérieux</h3>
+          <p>Salam, je cherche un artisan de confiance pour des travaux à la maison. Si vous avez une recommandation, je suis preneur.</p>
+          <div class="card-bottom"><span>📍 Lyon</span><button class="reply" data-title="Recherche d'un artisan sérieux">Voir la demande <span>→</span></button></div>
+          <div class="response-count">◯ &nbsp; 3 réponses</div>
+        </article>
+
+        <article class="request-card" data-category="Professionnel">
+          <div class="card-top"><span class="tag">PROFESSIONNEL</span><span class="date">Hier</span></div>
+          <h3>Besoin d'un contact pour mon projet</h3>
+          <p>Je cherche à échanger avec une personne qui a déjà lancé son activité et qui pourrait me conseiller sur les premières étapes.</p>
+          <div class="card-bottom"><span>📍 Paris</span><button class="reply" data-title="Besoin d'un contact pour mon projet">Voir la demande <span>→</span></button></div>
+          <div class="response-count">◯ &nbsp; 5 réponses</div>
+        </article>
+
+        <article class="request-card" data-category="Bons plans">
+          <div class="card-top"><span class="tag">BONS PLANS</span><span class="date">Il y a 2 jours</span></div>
+          <h3>Un bon plan pour du matériel</h3>
+          <p>Je cherche un fournisseur fiable pour du matériel professionnel. Je suis intéressé par vos retours d'expérience.</p>
+          <div class="card-bottom"><span>📍 Lille</span><button class="reply" data-title="Un bon plan pour du matériel">Voir la demande <span>→</span></button></div>
+          <div class="response-count">◯ &nbsp; 2 réponses</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how">
+      <p class="section-kicker">SIMPLE ET PARTICIPATIF</p>
+      <h2>Chacun peut apporter quelque chose.</h2>
+      <div class="how-grid">
+        <div><span class="how-icon">✍</span><h3>1. Je demande</h3><p>J'explique ce dont j'ai besoin lorsque je ne trouve pas de solution seul.</p></div>
+        <div><span class="how-icon">↗</span><h3>2. Je partage</h3><p>Les membres répondent, recommandent un contact ou partagent leur expérience.</p></div>
+        <div><span class="how-icon">🤝</span><h3>3. On s'entraide</h3><p>Une mise en relation peut permettre de trouver une solution concrète.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span class="footer-brand">SUPERFRÈRE</span><span>ENTRAIDE · FOI · ÉLÉVATION</span><span>Maquette de démonstration — contenu fictif</span></footer>
+
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <div class="modal">
+      <button class="close" id="closeModal" aria-label="Fermer">×</button>
+      <p class="section-kicker">FAIRE APPEL À LA COMMUNAUTÉ</p>
+      <h2>Publier une demande</h2>
+      <form id="requestForm">
+        <label for="title">De quoi avez-vous besoin ?</label>
+        <input id="title" required placeholder="Ex. Je cherche un artisan…">
+        <label for="category">Catégorie</label>
+        <select id="category">
+          <option>Services</option><option>Professionnel</option><option>Conseils</option><option>Bons plans</option>
+        </select>
+        <label for="city">Ville</label>
+        <input id="city" placeholder="Ex. Lyon">
+        <label for="description">Décrivez votre demande</label>
+        <textarea id="description" required rows="4" placeholder="Expliquez ce que vous recherchez…"></textarea>
+        <button class="primary full" type="submit">Publier la demande</button>
+      </form>
+      <p class="form-note">Démo : la demande est ajoutée à cette page uniquement.</p>
+    </div>
+  </div>
+  <!-- Fenêtre de détail d'une demande -->
+<div class="modal-backdrop" id="detailModal">
+    <div class="modal">
+        <button class="close" id="closeDetail">×</button>
+
+        <p class="section-kicker">DEMANDE DE LA COMMUNAUTÉ</p>
+
+        <h2 id="detailTitle"></h2>
+
+        <p id="detailDescription"></p>
+
+        <h3>Réponses des membres</h3>
+
+        <div id="responses">
+            <div class="response">
+                <strong>Un membre</strong>
+                Salam, je connais quelqu'un de sérieux
+                qui pourrait t'aider. Je peux te transmettre
+                son contact.
+            </div>
+
+            <div class="response">
+                <strong>Un autre membre</strong>
+                J'ai déjà fait appel à un professionnel
+                dans ce domaine. Je recommande !
+            </div>
+        </div>
+
+        <label for="replyText">Votre réponse</label>
+
+        <textarea id="replyText"
+            placeholder="Partagez un conseil ou un contact..."
+            rows="3"></textarea>
+
+        <button class="primary full" id="sendReply">
+            Envoyer ma réponse
+        </button>
+
+        <p class="form-note">
+            Démonstration : les réponses ne sont pas publiées en ligne.
+        </p>
+    </div>
+</div>
+  <div class="toast" id="toast">Demande ajoutée à la maquette !</div>
+  <script src="script.js"></script>
+</body>
+</html>
